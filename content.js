@@ -13,11 +13,10 @@
 
 window.PLAYBOOK_COURSE = {
   title: "The Buyer & Sell Playbook",
-  tagline: "Our operational workflows, one training module at a time.",
+  tagline: "A private guide to the art of exceptional service.",
   intro:
-    "Fourteen workflows, one clear path through how we run transactions, closings and property accounts. " +
-    "Each module opens straight into its training files on Google Drive — no login, no passwords. " +
-    "Work through them in order, tick off your checklist, and mark the module complete when you've run it end to end.",
+    "Fourteen considered workflows take you from the first signed contract through closing and beyond. " +
+    "Explore the standards, open the shared training resources, and track each step at your own pace — all in one place.",
   drive: "https://drive.google.com/drive/folders/1JD8dnZ1RQs5So590tUph-8zIykh7oxIu?usp=sharing",
 
   phases: [
