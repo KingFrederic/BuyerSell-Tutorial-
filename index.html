@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Buyer &amp; Sell Playbook — Operational Training</title>
+  <meta name="description" content="Our operational workflows, one training module at a time. No login required — all training files are shared on Google Drive.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#2d5f4e">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Set theme before paint to avoid a flash of the wrong scheme -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("bs-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <!-- Type: Fraunces for display, Inter for body (system fallbacks below) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#2d5f4e"/>
+          <path d="M32 13 L53 30 H47 V50 H37 V39 H27 V50 H17 V30 H11 Z" fill="#f6f3ec"/>
+          <path d="M27 42 l4 4 9-9" stroke="#2d5f4e" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Buyer &amp; Sell<small>Operational Playbook</small></span>
+      </a>
+
+      <div class="header-progress">
+        <div class="progress-track" id="headerProgressTrack" role="progressbar" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" aria-valuetext="0 of 14 modules complete" aria-label="Training progress">
+          <div class="progress-fill" id="headerProgressFill"></div>
+        </div>
+        <span class="progress-label" id="headerProgressLabel">0 of 14 modules complete</span>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 019.5 3.5a8.5 8.5 0 1011 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sidebar" aria-label="Open module menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scrim" id="navScrim" hidden></div>
+
+  <div class="shell">
+    <nav class="sidebar" id="sidebar" aria-label="Training modules">
+      <!-- Populated by app.js -->
+    </nav>
+
+    <main id="main">
+      <!-- Dashboard and module views are rendered here by app.js -->
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-tag">Buyer &amp; Sell — Operational Playbook</span>
+      <span class="footer-links">
+        Training files on <a href="https://drive.google.com/drive/folders/1JD8dnZ1RQs5So590tUph-8zIykh7oxIu?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a> · No login required · Progress saved on this device
+      </span>
+    </div>
+  </footer>
+
+  <div class="sr-only" role="status" aria-live="polite" id="live"></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
